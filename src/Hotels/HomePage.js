@@ -1,13 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import Styles from "./HomePage.module.css";
 import Hotel from "./Hotel";
 import FirstImage from "../Images/FirstHotelImage.jpg";
 import SecondImage from "../Images/SecondHotelImage.jpg";
 import ThirdImage from "../Images/ThirdHotelImage.jpg";
 import FourthImage from "../Images/FourthHotelImage.jpg";
-import { DatePicker, Select } from "antd";
+import { DatePicker, Select } from "antd";;
+
 const { RangePicker } = DatePicker;
 const HomePage = () => {
+const[imageState,setImageState] = useState("");
+
   return (
     <div className="container mt-5">
       <div className={`row ${Styles.firstRow}`}>
@@ -105,21 +108,29 @@ const HomePage = () => {
 
         <Hotel
           image={FirstImage}
+          setImageState = {setImageState}
+          
           Heading="Kohinoor Hotel"
           Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.."
         />
         <Hotel
           image={SecondImage}
+          setImageState = {setImageState}
+
           Heading="Hotel Ama"
           Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.."
         />
         <Hotel
           image={ThirdImage}
+          setImageState = {setImageState}
+
           Heading="Hotel SAROVAR"
           Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.."
         />
         <Hotel
           image={FourthImage}
+          setImageState = {setImageState}
+
           Heading="Hotel Home Stay"
           Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.."
         />
