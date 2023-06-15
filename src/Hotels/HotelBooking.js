@@ -1,5 +1,5 @@
 import React from 'react'
-import "./ViewHotel.css"
+import Styles from "./ViewHotel.module.css"
 const HotelBooking = () => {
   return (
     <div className='container'>
@@ -31,30 +31,33 @@ const HotelBooking = () => {
 
             
         </div>
-        <div className="guestDetails col-lg-8">
-                <div>
-                    <input type="text" className="form-control col-lg-12 my-3" placeholder='enter your name'/>
+        <div className={`col-lg-8 ${Styles.guestDetails}`}>
+                <div className="mt-3">
+                <label>Name</label>
+                    <input type="text" className="form-control col-lg-12 mb-3" placeholder='enter your name'/>
                 </div>
                 <div>
-                <input type="text" className="form-control col-lg-12 my-3" placeholder='enter your mobile'
+                <label>Email</label>
+                <input type="text" className="form-control col-lg-12 mb-3" placeholder='enter your mobile'
                 />
 
                 </div>
                 <div>
-                <input type="text" className="form-control col-lg-12 my-3" placeholder='enter your address'/>
+                <label>Mobile</label>
+                <input type="text" className="form-control col-lg-12 mb-3" placeholder='enter your address'/>
 
                 </div>
 
-                <div className='my-4'>
+                {/* <div className='my-4'>
                     <label>Select Payment Method</label>
                     <br/>
                     <input type="radio" name="phonePay" /> Phone Pay &nbsp;&nbsp;&nbsp;
                     <input type="radio" name="phonePay" /> Google Pay&nbsp;&nbsp;&nbsp;
                     <input type="radio" name="phonePay" /> Net Banking  
-                </div>
+                </div> */}
 
                 <div className='my-5'>
-                    <button className="btn bookNow">Book Now</button>
+                    <button className={`btn ${Styles.bookNow}`}>Book Now</button>
                 </div>
         </div>
 
